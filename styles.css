@@ -2,55 +2,81 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "poppins", sans-serif;
 }
 body {
+  background: #3d64e4;
+}
+.container {
+  background: #ffffff;
+  width: 80%;
+  max-width: 470px;
+  padding: 3em 2.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.62em;
+  box-shadow: 0 1.25em 1.8em, rgba(8, 21, 65, 0.25);
+}
+#searchbox {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1.25em;
+}
+#searchbox button {
+  font-size: 1em;
+  color: #ffffff;
+  background: #3d64e4;
+  border-radius: 1.5em;
+  border: none;
+  padding: 0.8em 0;
+  cursor: pointer;
+}
+#searchbox input {
+  font-size: 1em;
+  padding: 0 0.62em;
+  border: none;
+  border-bottom: 2px solid #3d64e4;
+  outline: none;
+  color: #222a43;
+}
+#search_details #flag-icon {
+  width: 150px;
+  position: relative;
+  top: 5px;
+  left: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top, #103ce7, #64e9ff);
-  background-repeat: no-repeat;
-  min-height: 100vh;
 }
-.container {
-  width: 400px;
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
+#search_details h4 {
+  font-weight: 600;
 }
-input:not(.text) {
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  margin: 10px;
-  font-size: 24px;
-  font-weight: 500;
-  transition: all 0.2s ease-in-out;
+
+#flag-icon,
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10px;
 }
-input:hover:not(.text .op) {
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+/* .container h4 {
+  display: inline;
+  color: #000;
+  font-weight: 600;
+} */
+#search_details span {
+  text-transform: capitalize;
+  color: #3d64e4;
+  font-size: 0.9em;
+  padding-left: 3px;
 }
-.op {
-  color: blue;
+.error {
+  display: none;
+  font-size: 12px;
+  padding-top: 5px;
+  color: red;
 }
-.op:hover {
-  background: #000;
-  color: blue;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-.output .text {
-  width: 100%;
-  height: 70px;
-  padding: 0 20px 0 0;
-  margin-bottom: 15px;
-  text-align: right;
-  font-size: 30px;
-  border-radius: 50px;
-}
-.container .equal {
-  width: 155px;
-  border-radius: 30px;
+#search_details {
+  display: none;
 }
